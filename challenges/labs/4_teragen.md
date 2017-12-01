@@ -3,7 +3,7 @@ The result of the time command
 
 ```sh
 
-[hdfs@ip-172-31-30-64 cloudera-scm-server]$ time hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce/hadoop-examples.jar teragen -Dmapred.map.tasks=12 -Ddfs.block.size=33554432 -Dmapreduce.map.memory.mb=512 65536000 /user/saturn/tgen
+[saturn@ip-172-31-30-64 cloudera-scm-server]$ time hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-0.20-mapreduce/hadoop-examples.jar teragen -Dmapred.map.tasks=12 -Ddfs.block.size=33554432 -Dmapreduce.map.memory.mb=512 65536000 /user/saturn/tgen
 17/12/01 12:07:41 INFO client.RMProxy: Connecting to ResourceManager at ip-172-31-30-64.ec2.internal/172.31.30.64:8032
 17/12/01 12:07:41 INFO terasort.TeraSort: Generating 65536000 using 12
 17/12/01 12:07:41 INFO mapreduce.JobSubmitter: number of splits:12
@@ -89,21 +89,21 @@ The command and output of hdfs dfs -ls /user/saturn/tgen
 
 ```sh
 
-[hdfs@ip-172-31-30-64 cloudera-scm-server]$ hdfs dfs -ls /user/saturn/tgen
+[saturn@ip-172-31-30-64 cloudera-scm-server]$ hdfs dfs -ls /user/saturn/tgen
 Found 13 items
--rw-r--r--   3 hdfs supergroup          0 2017-12-01 12:08 /user/saturn/tgen/_SUCCESS
--rw-r--r--   3 hdfs supergroup  546133400 2017-12-01 12:08 /user/saturn/tgen/part-m-00000
--rw-r--r--   3 hdfs supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00001
--rw-r--r--   3 hdfs supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00002
--rw-r--r--   3 hdfs supergroup  546133400 2017-12-01 12:08 /user/saturn/tgen/part-m-00003
--rw-r--r--   3 hdfs supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00004
--rw-r--r--   3 hdfs supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00005
--rw-r--r--   3 hdfs supergroup  546133400 2017-12-01 12:08 /user/saturn/tgen/part-m-00006
--rw-r--r--   3 hdfs supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00007
--rw-r--r--   3 hdfs supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00008
--rw-r--r--   3 hdfs supergroup  546133400 2017-12-01 12:08 /user/saturn/tgen/part-m-00009
--rw-r--r--   3 hdfs supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00010
--rw-r--r--   3 hdfs supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00011
+-rw-r--r--   3 saturn supergroup          0 2017-12-01 12:08 /user/saturn/tgen/_SUCCESS
+-rw-r--r--   3 saturn supergroup  546133400 2017-12-01 12:08 /user/saturn/tgen/part-m-00000
+-rw-r--r--   3 saturn supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00001
+-rw-r--r--   3 saturn supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00002
+-rw-r--r--   3 saturn supergroup  546133400 2017-12-01 12:08 /user/saturn/tgen/part-m-00003
+-rw-r--r--   3 saturn supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00004
+-rw-r--r--   3 saturn supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00005
+-rw-r--r--   3 saturn supergroup  546133400 2017-12-01 12:08 /user/saturn/tgen/part-m-00006
+-rw-r--r--   3 saturn supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00007
+-rw-r--r--   3 saturn supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00008
+-rw-r--r--   3 saturn supergroup  546133400 2017-12-01 12:08 /user/saturn/tgen/part-m-00009
+-rw-r--r--   3 saturn supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00010
+-rw-r--r--   3 saturn supergroup  546133300 2017-12-01 12:08 /user/saturn/tgen/part-m-00011
 
 ```
 
